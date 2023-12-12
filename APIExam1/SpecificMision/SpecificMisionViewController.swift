@@ -66,7 +66,7 @@ class SpecificMisionViewController: UIViewController {
         view.addSubview(nameShip)
         nameShip.addAnchorsAndCenter(centerX: true, centerY: false, width: 200, height: 30, left: nil, top: 70, right: nil, bottom: nil)
         
-        detail.text = "Details"
+        detail.text = "Detalles"
         view.addSubview(detail)
         detail.addAnchorsAndSize(width: 200, height: 30, left: 20, top: 40, right: nil, bottom: nil, withAnchor: .top, relativeToView: buttonBack)
         
