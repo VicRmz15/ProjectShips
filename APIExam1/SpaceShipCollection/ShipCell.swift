@@ -84,7 +84,7 @@ class ShipCell: UICollectionViewCell {
     
     func fechaFormateada(fechaIncorrecta : String ) -> String{
         let dateFormatterEntrada = DateFormatter()
-        dateFormatterEntrada.dateFormat = "YYYY-MM-DDT00:00:00.000Z"
+        dateFormatterEntrada.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
         
         if let fecha = dateFormatterEntrada.date(from: fechaIncorrecta){
             var launchDateNew : String = shipModelInformation?.launch_date_utc ?? "No hay fecha"
