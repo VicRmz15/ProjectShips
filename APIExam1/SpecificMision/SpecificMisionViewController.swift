@@ -26,10 +26,24 @@ class SpecificMisionViewController: UIViewController {
     
     var nameShip : UILabel = {
         var nameShip = UILabel()
-        nameShip.font = UIFont(name: "Serif", size: 20)
-        nameShip.textColor = .systemGreen
+        nameShip.font = UIFont(name: "Arial Bold", size: 30)
+        nameShip.textColor = .white
         nameShip.textAlignment = .center
         return nameShip
+    }()
+    
+    var detail : UILabel = {
+       var detail = UILabel()
+        detail.font = UIFont(name: "Arial Bold", size: 30)
+        detail.textColor = .systemBlue
+        return detail
+    }()
+    
+    var dateLaunch : UILabel = {
+       var dateLaunch = UILabel()
+        dateLaunch.font = UIFont(name: "Arial", size: 20)
+        dateLaunch.textColor = .systemMint
+        return dateLaunch
     }()
 
     override func viewDidLoad() {
@@ -50,7 +64,15 @@ class SpecificMisionViewController: UIViewController {
         nameShip.backgroundColor = .clear
         nameShip.text = shipModelInformation?.mission_name
         view.addSubview(nameShip)
-        nameShip.addAnchorsAndCenter(centerX: true, centerY: false, width: 200, height: 25, left: nil, top: 100, right: nil, bottom: nil)
+        nameShip.addAnchorsAndCenter(centerX: true, centerY: false, width: 200, height: 30, left: nil, top: 70, right: nil, bottom: nil)
+        
+        detail.text = "Details"
+        view.addSubview(detail)
+        detail.addAnchorsAndSize(width: 200, height: 30, left: 20, top: 40, right: nil, bottom: nil, withAnchor: .top, relativeToView: buttonBack)
+        
+        dateLaunch.text = shipModelInformation?.last_ll_update
+        view.addSubview(dateLaunch)
+        dateLaunch.addAnchorsAndSize(width: 200, height: 20, left: 20, top: 10, right: nil, bottom: nil, withAnchor: .top, relativeToView: detail)
         
     }
     
