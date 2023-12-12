@@ -77,9 +77,9 @@ class ShipCell: UICollectionViewCell {
         siteName.addAnchorsAndSize(width: 200, height: 15, left: 10, top: 40, right: nil, bottom: nil, withAnchor: .left, relativeToView: cohete)
 
         
-        //launchDate.text = "\(fechaFormateada)"
-        //squareDegraded.addSubview(launchDate)
-        //launchDate.addAnchors(left: nil, top: 5, right: 10, bottom: nil, withAnchor: .top, relativeToView: name)
+        launchDate.text = fechaFormateada(fechaIncorrecta: shipModelInformation.launch_date_utc!)
+        squareDegraded.addSubview(launchDate)
+        launchDate.addAnchors(left: 10, top: 70, right: nil, bottom: nil, withAnchor: .left, relativeToView: cohete)
     }
     
     func fechaFormateada(fechaIncorrecta : String ) -> String{
@@ -87,17 +87,17 @@ class ShipCell: UICollectionViewCell {
         dateFormatterEntrada.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
         
         if let fecha = dateFormatterEntrada.date(from: fechaIncorrecta){
-            var launchDateNew : String = shipModelInformation?.launch_date_utc ?? "No hay fecha"
+            //var launchDateNew : String = shipModelInformation?.launch_date_utc ?? "No hay fecha"
             var newDate = DateFormatter()
             newDate.dateFormat = "EEEE, MMM d, yyyy"
-            let fechaFormateada = newDate.date(from: launchDateNew)
+            let fechaFormateada = newDate.string(from: fecha)
             
             print("\(fechaFormateada)")
-            return fechaIncorrecta
+            return fechaFormateada
         }else {
             print("Error: No se pudo convertir la fecha")
         }
-        return ""
+        return "Hola"
     }
     
     required init?(coder: NSCoder) {
