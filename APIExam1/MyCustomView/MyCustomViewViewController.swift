@@ -30,7 +30,7 @@ class MyCustomViewViewController: UIViewController {
         getData()
        }
     
-    func getData(){
+    func getData(){ //Se modificará en un futuro en programación funcional.
       let networkManager = NetworkManager()
       networkManager.delegate = self
       networkManager.getSpaceList()

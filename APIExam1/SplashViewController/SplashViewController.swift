@@ -22,20 +22,33 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         initUI()
-        setupTimer()
+        getData()
+    }
+    
+    func getData(){ //Se modificará en un futuro en programación funcional.
+      let networkManager = NetworkManager()
+      networkManager.delegate = self
+      networkManager.getSpaceList()
     }
     
     func initUI(){
         view.addSubview(imageNasaSplash)
         imageNasaSplash.addAnchorsAndCenter(centerX: true, centerY: true, width: 200, height: 200, left: nil, top: nil, right: nil, bottom: nil)
     }
-    
-    func setupTimer(){
-        Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(goToMyCustomView), userInfo: nil, repeats: false)
-    }
-    
-     @objc func goToMyCustomView (){
-         viweModel.goToMyCustomView()
-    }
 
+}
+
+extension SplashViewController : NetworkManagerDelegate {
+    func responseSuccess(response: [ModelShip]) {
+        viweModel.goToMyCustomView(info: response)
+    }
+    
+    func responseError(error: Error) {
+        let alert = UIAlertController(title : "Error", message: "Hubo un error en la recepción de información", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .destructive)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    
 }

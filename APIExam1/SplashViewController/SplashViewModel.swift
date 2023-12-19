@@ -10,7 +10,7 @@ import Foundation
 class SplashViewModel {
     var coordinator : SplashCoordinator! //Se declara pero NO se inicializa
     
-    func goToMyCustomView (){
-        coordinator.goToMyCustomView()
+    func goToMyCustomView (info: [ModelShip]){
+        coordinator.goToMyCustomView(info: info)
     }
 }
