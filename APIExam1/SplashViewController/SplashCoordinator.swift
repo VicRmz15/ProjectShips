@@ -22,12 +22,14 @@ class SplashCoordinator : Coordinator{
         viewModel.coordinator = self
         view.viweModel = viewModel
         navigationController.setViewControllers([view], animated: true)
+        navigationController.setNavigationBarHidden(true, animated: true)
     }
     
     func goToMyCustomView(info: [ModelShip]) {
-        //let homeMyCustomCordinator = HomeMyCustomCoordinator(navigationController: navigationController)
-        //childCoordinator.append(homeMyCustomCordinator)
-        //homeMyCustomCordinator.startCoordinator()
+        let homeMyCustomCordinator = HomeViewCoordinator(navigationController: navigationController)
+        childCoordinator.append(homeMyCustomCordinator)
+        homeMyCustomCordinator.startCoordinator()
+        
     }
     
 }
