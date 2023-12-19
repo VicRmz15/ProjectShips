@@ -9,6 +9,9 @@ import UIKit
 
 class MyCustomViewViewController: UIViewController {
     
+    var myCustomViewModel : HomeViewModel!
+    //var myCustomCoordinator : HomeViewCoordinator!
+    
     var dataSource = [ModelShip]()
     
     var spaceBackground : UIImageView = {

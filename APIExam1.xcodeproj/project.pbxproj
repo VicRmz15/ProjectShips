@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39EAB7232B312ACA00C6C96A /* HomeMyCustomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EAB7222B312ACA00C6C96A /* HomeMyCustomViewModel.swift */; };
+		39EAB7252B312B0B00C6C96A /* HomeMyCustomViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EAB7242B312B0B00C6C96A /* HomeMyCustomViewCoordinator.swift */; };
 		662B3F122B1837C40014A7C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662B3F112B1837C40014A7C2 /* AppDelegate.swift */; };
 		662B3F142B1837C40014A7C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662B3F132B1837C40014A7C2 /* SceneDelegate.swift */; };
 		662B3F162B1837C40014A7C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662B3F152B1837C40014A7C2 /* ViewController.swift */; };
@@ -29,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		030AC3754082A5AC8BDC5755 /* Pods-APIExam1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIExam1.release.xcconfig"; path = "Target Support Files/Pods-APIExam1/Pods-APIExam1.release.xcconfig"; sourceTree = "<group>"; };
+		39EAB7222B312ACA00C6C96A /* HomeMyCustomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMyCustomViewModel.swift; sourceTree = "<group>"; };
+		39EAB7242B312B0B00C6C96A /* HomeMyCustomViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMyCustomViewCoordinator.swift; sourceTree = "<group>"; };
 		662B3F0E2B1837C40014A7C2 /* APIExam1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APIExam1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		662B3F112B1837C40014A7C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		662B3F132B1837C40014A7C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,10 @@
 			children = (
 				66D6A1342B31294300BEBAD7 /* SplashViewController */,
 				662B3F292B198C2E0014A7C2 /* MyCustomView */,
+				662B3F152B1837C40014A7C2 /* ViewController.swift */,
+				662B3F132B1837C40014A7C2 /* SceneDelegate.swift */,
+				662B3F112B1837C40014A7C2 /* AppDelegate.swift */,
+				66A0DFBE2B1D9BC300EF271D /* SpecificMision */,
 				662B3F322B19966D0014A7C2 /* SpaceShipCollection */,
 				66A0DFBE2B1D9BC300EF271D /* SpecificMision */,
 				662B3F2E2B1990BF0014A7C2 /* NetworkManager */,
@@ -105,6 +113,7 @@
 				66D6A1392B312B5C00BEBAD7 /* AppCoordinator.swift */,
 				662B3F132B1837C40014A7C2 /* SceneDelegate.swift */,
 				662B3F152B1837C40014A7C2 /* ViewController.swift */,
+				662B3F292B198C2E0014A7C2 /* MyCustomView */,
 				662B3F172B1837C40014A7C2 /* Main.storyboard */,
 				662B3F1A2B1837C80014A7C2 /* Assets.xcassets */,
 				662B3F1C2B1837C80014A7C2 /* LaunchScreen.storyboard */,
@@ -117,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				662B3F2A2B198C500014A7C2 /* MyCustomViewViewController.swift */,
+				39EAB7222B312ACA00C6C96A /* HomeMyCustomViewModel.swift */,
+				39EAB7242B312B0B00C6C96A /* HomeMyCustomViewCoordinator.swift */,
 			);
 			path = MyCustomView;
 			sourceTree = "<group>";
@@ -304,7 +315,9 @@
 				66D6A13A2B312B5C00BEBAD7 /* AppCoordinator.swift in Sources */,
 				662B3F2B2B198C500014A7C2 /* MyCustomViewViewController.swift in Sources */,
 				662B3F302B1990D70014A7C2 /* NetworkManager.swift in Sources */,
+				39EAB7252B312B0B00C6C96A /* HomeMyCustomViewCoordinator.swift in Sources */,
 				662B3F122B1837C40014A7C2 /* AppDelegate.swift in Sources */,
+				39EAB7232B312ACA00C6C96A /* HomeMyCustomViewModel.swift in Sources */,
 				662B3F142B1837C40014A7C2 /* SceneDelegate.swift in Sources */,
 				662B3F362B199A230014A7C2 /* ShipCell.swift in Sources */,
 				662B3F262B1837E70014A7C2 /* Utils.swift in Sources */,
