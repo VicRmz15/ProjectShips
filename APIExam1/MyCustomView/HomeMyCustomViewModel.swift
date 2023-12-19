@@ -8,7 +8,7 @@
 import Foundation
 
 class HomeViewModel {
-    
+    var info : [ModelShip]?
    var coordinator : HomeViewCoordinator!
     
 }

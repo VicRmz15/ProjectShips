@@ -12,27 +12,27 @@ import UIKit
 class HomeViewCoordinator : Coordinator {
     var childCoordinator: [Coordinator] = []
     var navigationController : UINavigationController
+    var info : [ModelShip]?
     
     init(navigationController: UINavigationController) {
-      self.navigationController = navigationController
+        self.navigationController = navigationController
     }
     
     func startCoordinator() {
-      var view = MyCustomViewViewController()
-      var viewModel = HomeViewModel()
-      viewModel.coordinator = self
-      view.myCustomViewModel = viewModel
-      navigationController.pushViewController(view, animated: true)
+        var view = MyCustomViewViewController()
+        var viewModel = HomeViewModel()
+        viewModel.info = info
+        viewModel.coordinator = self
+        view.viewModel = viewModel
+        navigationController.pushViewController(view, animated: true)
     }
-    
-    
-  }
+}
 
-    
-    
 
-    
-    
-    
-    
-    
+
+
+
+
+
+
+

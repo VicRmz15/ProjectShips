@@ -9,7 +9,7 @@ import UIKit
 
 class MyCustomViewViewController: UIViewController {
     
-    var myCustomViewModel : HomeViewModel!
+    var viewModel : HomeViewModel!
     //var myCustomCoordinator : HomeViewCoordinator!
     
     var dataSource = [ModelShip]()
@@ -29,34 +29,21 @@ class MyCustomViewViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(spaceBackground)
         spaceBackground.addAnchorsWithMargin(0)
+        initInfo()
         initUI()
-        getData()
        }
     
-    func getData(){ //Se modificará en un futuro en programación funcional.
-      let networkManager = NetworkManager()
-      networkManager.delegate = self
-      networkManager.getSpaceList()
-    }
-    
     func initUI(){
+        spaceShipCollection.receiveData(dataSource: dataSource)
         spaceShipCollection.delegate = self
         view.addSubview(spaceShipCollection)
         spaceShipCollection.addAnchors(left: 15, top: 60, right: 15, bottom: 40)
     }
-
-}
-
-extension MyCustomViewViewController : NetworkManagerDelegate {
-    func responseSuccess(response: [ModelShip]) {
-        print("responseSucess\(response)")
-        dataSource.append(contentsOf: response)
-        spaceShipCollection.receiveData(dataSource: dataSource)
-    }
     
-    func responseError(error: Error) {
-        print("Error: \(error)")
+    func initInfo (){
+        dataSource = viewModel.info!
     }
+
 }
     
 extension MyCustomViewViewController : SpaceShipCollectionDelegate{
