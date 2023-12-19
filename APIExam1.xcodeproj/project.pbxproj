@@ -20,6 +20,10 @@
 		662B3F342B1996910014A7C2 /* SpaceShipCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662B3F332B1996910014A7C2 /* SpaceShipCollection.swift */; };
 		662B3F362B199A230014A7C2 /* ShipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662B3F352B199A230014A7C2 /* ShipCell.swift */; };
 		66A0DFC02B1D9C3600EF271D /* SpecificMisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A0DFBF2B1D9C3600EF271D /* SpecificMisionViewController.swift */; };
+		66D6A1332B31293D00BEBAD7 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D6A1322B31293D00BEBAD7 /* SplashViewController.swift */; };
+		66D6A1362B312AB900BEBAD7 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D6A1352B312AB900BEBAD7 /* SplashViewModel.swift */; };
+		66D6A1382B312AD100BEBAD7 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D6A1372B312AD100BEBAD7 /* SplashCoordinator.swift */; };
+		66D6A13A2B312B5C00BEBAD7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D6A1392B312B5C00BEBAD7 /* AppCoordinator.swift */; };
 		ACB7EF4A39B693452F2C91C2 /* Pods_APIExam1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2877FAB74EF415B112BBF76 /* Pods_APIExam1.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +44,10 @@
 		662B3F332B1996910014A7C2 /* SpaceShipCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceShipCollection.swift; sourceTree = "<group>"; };
 		662B3F352B199A230014A7C2 /* ShipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipCell.swift; sourceTree = "<group>"; };
 		66A0DFBF2B1D9C3600EF271D /* SpecificMisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificMisionViewController.swift; sourceTree = "<group>"; };
+		66D6A1322B31293D00BEBAD7 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		66D6A1352B312AB900BEBAD7 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		66D6A1372B312AD100BEBAD7 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
+		66D6A1392B312B5C00BEBAD7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		93A9362CAB3B4C49E44ECA67 /* Pods-APIExam1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIExam1.debug.xcconfig"; path = "Target Support Files/Pods-APIExam1/Pods-APIExam1.debug.xcconfig"; sourceTree = "<group>"; };
 		F2877FAB74EF415B112BBF76 /* Pods_APIExam1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APIExam1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -62,7 +70,6 @@
 				93A9362CAB3B4C49E44ECA67 /* Pods-APIExam1.debug.xcconfig */,
 				030AC3754082A5AC8BDC5755 /* Pods-APIExam1.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -87,13 +94,15 @@
 		662B3F102B1837C40014A7C2 /* APIExam1 */ = {
 			isa = PBXGroup;
 			children = (
-				66A0DFBE2B1D9BC300EF271D /* SpecificMision */,
+				66D6A1342B31294300BEBAD7 /* SplashViewController */,
+				662B3F292B198C2E0014A7C2 /* MyCustomView */,
 				662B3F322B19966D0014A7C2 /* SpaceShipCollection */,
+				66A0DFBE2B1D9BC300EF271D /* SpecificMision */,
 				662B3F2E2B1990BF0014A7C2 /* NetworkManager */,
 				662B3F2D2B198CA20014A7C2 /* Utils */,
 				662B3F2C2B198C870014A7C2 /* ModelShip */,
-				662B3F292B198C2E0014A7C2 /* MyCustomView */,
 				662B3F112B1837C40014A7C2 /* AppDelegate.swift */,
+				66D6A1392B312B5C00BEBAD7 /* AppCoordinator.swift */,
 				662B3F132B1837C40014A7C2 /* SceneDelegate.swift */,
 				662B3F152B1837C40014A7C2 /* ViewController.swift */,
 				662B3F172B1837C40014A7C2 /* Main.storyboard */,
@@ -151,6 +160,16 @@
 				66A0DFBF2B1D9C3600EF271D /* SpecificMisionViewController.swift */,
 			);
 			path = SpecificMision;
+			sourceTree = "<group>";
+		};
+		66D6A1342B31294300BEBAD7 /* SplashViewController */ = {
+			isa = PBXGroup;
+			children = (
+				66D6A1322B31293D00BEBAD7 /* SplashViewController.swift */,
+				66D6A1352B312AB900BEBAD7 /* SplashViewModel.swift */,
+				66D6A1372B312AD100BEBAD7 /* SplashCoordinator.swift */,
+			);
+			path = SplashViewController;
 			sourceTree = "<group>";
 		};
 		9DA112AB15DC0E0E3D8C68C9 /* Frameworks */ = {
@@ -277,15 +296,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				662B3F342B1996910014A7C2 /* SpaceShipCollection.swift in Sources */,
+				66D6A1382B312AD100BEBAD7 /* SplashCoordinator.swift in Sources */,
 				66A0DFC02B1D9C3600EF271D /* SpecificMisionViewController.swift in Sources */,
 				662B3F282B1838480014A7C2 /* ModelShip.swift in Sources */,
+				66D6A1362B312AB900BEBAD7 /* SplashViewModel.swift in Sources */,
 				662B3F162B1837C40014A7C2 /* ViewController.swift in Sources */,
+				66D6A13A2B312B5C00BEBAD7 /* AppCoordinator.swift in Sources */,
 				662B3F2B2B198C500014A7C2 /* MyCustomViewViewController.swift in Sources */,
 				662B3F302B1990D70014A7C2 /* NetworkManager.swift in Sources */,
 				662B3F122B1837C40014A7C2 /* AppDelegate.swift in Sources */,
 				662B3F142B1837C40014A7C2 /* SceneDelegate.swift in Sources */,
 				662B3F362B199A230014A7C2 /* ShipCell.swift in Sources */,
 				662B3F262B1837E70014A7C2 /* Utils.swift in Sources */,
+				66D6A1332B31293D00BEBAD7 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
