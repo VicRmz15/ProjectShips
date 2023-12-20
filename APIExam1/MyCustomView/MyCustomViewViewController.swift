@@ -50,11 +50,10 @@ extension MyCustomViewViewController : SpaceShipCollectionDelegate{
         func selectedMision(indexPath: IndexPath) {
             
             let info = dataSource[indexPath.item]
-            
-            let specificMision = SpecificMisionViewController()
-            
-            specificMision.shipModelInformation = info
-            specificMision.modalPresentationStyle = .fullScreen
-            self.present(specificMision, animated: true)
+            viewModel.goToMySpecificMision(info: info)
+            //let specificMision = SpecificMisionViewController()
+            //specificMision.shipModelInformation = info
+            //specificMision.modalPresentationStyle = .fullScreen
+            //self.present(specificMision, animated: true)
         }
 }

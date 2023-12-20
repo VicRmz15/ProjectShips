@@ -9,7 +9,10 @@ import Foundation
 
 class HomeViewModel {
     var info : [ModelShip]?
-   var coordinator : HomeViewCoordinator!
+    var coordinator : HomeViewCoordinator!
     
+    func goToMySpecificMision (info: ModelShip){
+        coordinator.goToMySpecificMision(info: info)
+    }
 }
 

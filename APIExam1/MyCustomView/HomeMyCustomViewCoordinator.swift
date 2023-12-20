@@ -26,6 +26,13 @@ class HomeViewCoordinator : Coordinator {
         view.viewModel = viewModel
         navigationController.pushViewController(view, animated: true)
     }
+    
+    func goToMySpecificMision(info: ModelShip){
+        let specificMisionCoordinator = SpecificMisionCoordinator(navigationController: navigationController)
+        specificMisionCoordinator.info = info
+        childCoordinator.append(specificMisionCoordinator)
+        specificMisionCoordinator.startCoordinator()
+    }
 }
 
 
